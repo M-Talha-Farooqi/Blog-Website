@@ -1,4 +1,6 @@
 import Navbar from "./components/Navbar";
+import PostList from "./components/PostList";
+import FeaturedPosts from "./components/FeaturedPosts";
 
 const App = () => {
   return (
@@ -8,7 +10,9 @@ const App = () => {
       {/* BREADCRUMB */}
       {/* INTRODUCTION */}
       {/* FEATURED POSTS */}
+      <FeaturedPosts />
       {/* POST LIST */}
+      <PostList />
     </div>
   );
 };
