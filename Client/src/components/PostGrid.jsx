@@ -27,7 +27,6 @@ const PostGrid = () => {
     return <div>No posts available</div>; // Render a fallback UI
   }
 
-  // Memoized filtered posts for performance optimization
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
       const matchesSearch =
@@ -108,7 +107,7 @@ const PostGrid = () => {
             )}
           </div>
         ) : (
-          <HandlePosts /> // Renders this if there are no posts in the store
+          <HandlePosts />
         )}
       </div>
     </div>

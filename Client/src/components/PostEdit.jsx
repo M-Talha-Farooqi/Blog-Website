@@ -64,7 +64,6 @@ const PostEdit = ({ post }) => {
         );
       });
 
-      // Refetch posts to ensure the latest data is displayed
       const fetchPosts = async () => {
         try {
           const response = await fetch("http://localhost:5001/api/posts");
@@ -81,7 +80,7 @@ const PostEdit = ({ post }) => {
       await fetchPosts();
 
       alert("Post updated successfully.");
-      navigate("/"); // Redirect to main screen after successful update
+      navigate("/");
     } catch (error) {
       console.error("Error updating post:", error);
       alert("Failed to update post. Please try again.");

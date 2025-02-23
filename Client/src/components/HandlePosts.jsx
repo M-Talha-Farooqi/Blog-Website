@@ -13,7 +13,7 @@ const HandlePosts = () => {
           throw new Error("Failed to fetch posts");
         }
         const data = await response.json();
-        setPosts(data); // Update the posts state
+        setPosts(data);
       } catch (error) {
         console.error("Error fetching posts:", error);
       }
@@ -26,9 +26,9 @@ const HandlePosts = () => {
     <div>
       <h1 className="text-2xl font-bold">All Posts</h1>
       {posts.length > 0 ? (
-        <PostGrid posts={posts} /> // Render posts if available
+        <PostGrid posts={posts} />
       ) : (
-        <p>No posts available.</p> // Fallback message
+        <p>No posts available.</p>
       )}
     </div>
   );

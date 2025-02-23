@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
-// Register
+// Sign Up
 router.post("/signup", async (req, res) => {
   try {
     console.log("Signup request received:", req.body);
@@ -35,7 +35,7 @@ router.post("/signup", async (req, res) => {
       });
     }
 
-    // Hash password
+    // Hash password / Password Encryption
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 

@@ -57,8 +57,8 @@ const PostView = () => {
       if (!response.ok) {
         throw new Error("Failed to delete post");
       }
-      deletePost(post._id); // Remove from state
-      navigate("/"); // Redirect to home
+      deletePost(post._id);
+      navigate("/");
     } catch (error) {
       console.error("Error deleting post:", error);
     }

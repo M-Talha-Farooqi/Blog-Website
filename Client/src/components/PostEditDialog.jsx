@@ -2,13 +2,12 @@ import React from "react";
 import Modal from "react-modal";
 import PostEditor from "./PostEditor"; // Import the original PostEditor
 
-// Set the app element for accessibility
 Modal.setAppElement("#root");
 
 const PostEditDialog = ({ isOpen, onRequestClose, post, onSave }) => {
   const handleSave = async (updatedPost) => {
-    await onSave(updatedPost); // Call the onSave function passed as a prop
-    onRequestClose(); // Close the modal after saving
+    await onSave(updatedPost);
+    onRequestClose();
   };
 
   return (
@@ -18,8 +17,8 @@ const PostEditDialog = ({ isOpen, onRequestClose, post, onSave }) => {
       contentLabel="Edit Post"
       className="modal"
       overlayClassName="overlay"
-      shouldCloseOnOverlayClick={false} // Prevent closing when clicking outside
-      shouldCloseOnEsc={false} // Prevent closing when pressing ESC
+      shouldCloseOnOverlayClick={false}
+      shouldCloseOnEsc={false}
     >
       <PostEditor post={post} onSave={handleSave} />
       <button
@@ -32,4 +31,4 @@ const PostEditDialog = ({ isOpen, onRequestClose, post, onSave }) => {
   );
 };
 
-export default PostEditDialog; 
+export default PostEditDialog;
