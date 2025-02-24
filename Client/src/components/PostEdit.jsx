@@ -29,7 +29,7 @@ const PostEdit = ({ post }) => {
       category,
       authorId: user.id,
       author: {
-        name: user.name || "Anonymous",
+        name: user.username || "Anonymous",
         avatar: "https://avatar.iran.liara.run/public",
       },
     };
