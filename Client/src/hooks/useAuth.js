@@ -17,7 +17,7 @@ export const useAuth = () => {
     localStorage.removeItem("user");
   };
 
-  // Check for existing user session on mount
+  // Check for existing user session on compoenet loading
   useEffect(() => {
     const storedUser = localStorage.getItem("user");
     if (storedUser) {

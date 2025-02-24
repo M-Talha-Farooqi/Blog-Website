@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { usePostsStore } from "../stores/usePostsStore";
-import PostGrid from "./PostGrid"; // Assuming you have a PostGrid component
+import PostGrid from "./PostGrid";
 
 const HandlePosts = () => {
   const { posts, setPosts } = usePostsStore();

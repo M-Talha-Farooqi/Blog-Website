@@ -13,7 +13,6 @@ const PostEdit = ({ post }) => {
   const [image, setImage] = useState(post?.featuredImage || "");
   const [tags, setTags] = useState(post?.tags.join(", ") || "");
   const [category, setCategory] = useState(post?.category || "Technology");
-  const [loading, setLoading] = useState(false);
 
   const handleSave = async () => {
     if (!user) {

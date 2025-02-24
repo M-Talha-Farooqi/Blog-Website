@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Create a post
+//! It will Create a post
 router.post("/", auth, async (req, res) => {
   try {
     const { title, content } = req.body;
